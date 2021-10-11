@@ -9,16 +9,132 @@
     padding: 0;
 }
 body {
-    margin-top: 50px;
     background-image: url(./assets/taj-mahal1.png);
     background-position: center;
 }
+.class-for-index {
+    margin-top: 1px;
+}
 
+/*TOP HEADER MENU */
+.class-for-logo {
+    width: 75px;
+    height: 75px;
+    border-radius: 25px;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+body  {
+    font-family: sans-serif;
+}
+nav {
+    background: rgb(119, 9, 9);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+nav .mainMenu {
+    display: flex;
+    list-style: none;
+}
+nav .mainMenu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.5rem;
+}
+nav .mainMenu li a:hover {
+    background: rgb(255,94,0);
+}
+nav .openMenu {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+nav .mainMenu .closeMenu {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+nav .logo {
+    margin: 6px;
+    font-size: 25px;
+    cursor: pointer;
+}
+@media(max-width: 800px){
+    nav .mainMenu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        transition: top 1s ease;
+        display: none;
+    }
+    nav .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    nav .openMenu {
+        display: block;
+    }
+    nav .mainMenu li a:hover {
+        background: none;
+        color: rgb(255, 123, 0);
+        font-size: 1.6rem;
+    }
+}  
+
+/*Carousel Menu and Main Banner*/
+.carousel-item {
+    background-position: center;
+    height: 50vh;
+    width: 100vh
+}
+.fixed-width {
+    height: 50vh;
+    width: 210vh;
+    align-items: center;
+   }
+div.carousel-caption p {
+    font-family: helvetica;
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(255,94,0);
+}
+.banner-title {
+    padding-top: 100px;
+    font-size: 65px;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 6px rgb(177, 104, 196);
+    font-family: 'Libre Baskerville', serif;
+    color: #eeebeb;
+}
+.banner-p {
+    font-family: helvetica;
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(240, 220, 208);
+}
 /*COMPONENTS*/
 .button-outline-white {
-    color: whitesmoke;
-    background: red;
-    border: 2px solid whitesmoke;
+    color: rgb(15, 15, 15);
+    background: rgb(201, 80, 80);
+    border: 2px solid rgb(82, 45, 45);
     font-size: 20px;
     padding: 14px;
     margin: 10px;
@@ -30,99 +146,26 @@ body {
     color: black;
 }
 
-/*TOP HEADER MENU */
-img {
-    width: 120px;
-    height: 120px;
-    display: block;
-}
-.main-menu-container {
-    background-color: rgba(49, 63, 67, 0.966);
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    opacity: 0.9;
-}
-.main-menu {
-    margin: 0 auto;
-    max-width: 800px;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-inline-start: 0;
-    color: black;
-    line-height: 50px;
-    height: 50px;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-.menu-item {
-    cursor: pointer;
-    opacity: 1;
-    color: black;
-    transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-    transition: color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-.menu-item:hover {
-    color: lightpink;
-    opacity: 0.8;
-    transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-    transition: color 0,3s cubic-bezier(0.25, 0.1, 0.25, 1);;
-}
-/*Carousel*/
-.carousel-item {
-    background: lightgrey;
-    background-position: center;
-    height: 50vh;
-    width: 100vh
-}
-.fixed-width {
-    height: 50vh;
-    width: 190vh;
-    align-items: center;
-   }
-/* MAIN BANNER */
-.main-banner {
-    height: 100vh;
-    min-height: 800px;
-    background-position: top center;
-    background-size: auto;
-    background-repeat: no-repeat;
-    color: whitesmoke;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.banner-title {
-    padding-top: 100px;
-    font-size: 65px;
-    letter-spacing: 1.5px;
-    text-shadow: 1px 1px 6px rgb(89, 213, 48);
-    font-family: 'Libre Baskerville', serif;
-    color: #DD1C1A;
-}
-
+/*Main section of Index*/
 /*MAIN COMPONENTS*/
-section.Menu {
+section.Story, section.Menu {
     width: 50vh;
     height: 260px;
-    margin: 0 auto 5px;
+    margin: 0 auto 10px;
     padding: 5px 0;
     position: relative;
     right: -330px;
     color: rgb(0,0,0);
     font-weight: 400;
-    font-family: Helvetica;
 }
-    section.Menu h2 {
-        font-family: Georgia;
-        font-weight: bold;
-        font-size: 60px;
-        color:rgb(21, 51, 114);
-        text-align: center;
-    }
-    section.Menu p {
+section.Story h2, section.Menu h2 {
+    font-family: Georgia;
+    font-weight: bold;
+    font-size: 30px;
+    color:rgb(21, 51, 114);
+    text-align: center;
+}
+    section.Menu p, section.Story p {
         position: relative;
         right: -50px;
         font-size: 25px;
@@ -157,4 +200,132 @@ section.Menu {
         background-color: grey;
         color: black;
     }
-    
+
+/*CSS FOR MENU*/
+.class-for-menu {
+    margin-top: 1px;
+}
+.menu-title {
+    font-family: cursive;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    font-size: 80px;
+}
+.img-menu-container {
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+    clear: both;
+    align-items: center;
+}
+.column {
+    float: right;
+    width: 33%;
+    padding: 1px;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.wrap-menu {
+	display: table;
+	width: 980px;
+	max-width: 440px; }
+.category-item {
+	width: 80vh;
+	margin: 0 auto;
+	text-align: center;
+    font-family: helvetica;;
+	font-size: 35px;
+	color:#ce5658;
+    display: inline-block; }
+.ic-cate {
+	display: inline-block;
+	width: 235px;
+	height: 27px; }
+.row-menu-wrap {
+	margin-bottom: 35px; }
+.row-menu {
+	display: flex; }
+.item-menu {
+	display: flex;
+	width: 90%;
+	font-size: 19px;
+	font-family: cursive;
+    font-weight: bold;
+	color:#211870; }
+.item-prise {
+	display: flex;
+	font-size: 21px;
+	font-family: 'sans-serif';
+	color:#cc1f00; }
+
+.gold-line {
+    display: inline-block;
+	width: 100%;
+	height: 1px;
+	margin-bottom: 8px;
+    background-color:#ce1a02;
+	}
+    .item-descr{
+		font-size: 16px;
+		font-family: helvetica;
+        color:rgb(255,94,0);
+	}
+
+/*RESERVATION PAGE*/ 
+* {
+    margin: 0;
+    padding: 0;
+}
+.class-for-reservation {
+    background-color: royalblue;
+    font-family: sans-serif;
+}
+.contact-box {
+    width: 480px;
+    background-color: rgb(223, 169, 169);
+    box-shadow: 0 0 20px 0 #999;
+    top: 440px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+}
+.class-for-reserve {
+    font-family: helvetica;
+    color: red;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;  
+}
+form {
+    margin: 35px;
+}
+.input-field {
+    width: 400px;
+    height: 40px;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 3px solid rgb(175, 84, 84);
+    outline: none;
+    border-radius: 30px;
+}
+.textarea-field {
+    height: 150px;
+    padding-top: 10px;
+}
+.btn {
+    border-radius: 20px;
+    color: #fff;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #a80b0b9a;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+
+}
+

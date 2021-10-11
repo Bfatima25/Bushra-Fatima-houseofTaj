@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catering</title>
+    <title>Reservation Form</title>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300, 700" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
 </head>
-<body class="class-for-catering">
+<body class="class-for-reservation">
     <header>
         <!-- Top Navigation Menu -->
         <nav>
@@ -20,18 +19,24 @@
          <ul class="mainMenu">
              <li><a href="index.html">Home</a></li>
              <li><a href="menu.html">Menu</a></li>
-             <li><a href="contact.html">Reservations</a></li>
+             <li><a href="#">Reservations</a></li>
              <li><a href="#">Catering</a></li>
              <li><a href="#">Our Info</a></li>
          </ul>
      </nav>
      <script src="./app.js"></script>
-    </header>
-    <section>
-        <h1>We do Cater!</h1>
-        <h2>For Catering orders, call us or submit your info through contact page. </br>
-            And we will get back to you. Thank you!
-        </h2>
-    </section>
+     <div class="contact-box">
+         <h2 class="class-for-reserve">Reserve Your Table Now!</h2>
+         <form action="https://formspree.io/f/xgerqqzj" method="POST">
+             <input type="text" name="firstName" class="input-field" placeholder="First Name" required>
+             <input type="text" name="lastName" class="input-field" placeholder="Last Name" required>
+             <input type="text" name="_replyto" name="email" class="input-field" placeholder="your Email" required>
+             <input type="text" name="subject" class="input-field" placeholder="Subject">
+             <textarea type="text" class="input-field textarea-field" placeholder="your message">
+            </textarea>
+            <button type="submit" class="btn" value="Send">Reserve Now</button>
+            </form>
+
+     </div>
 </body>
 </html>
