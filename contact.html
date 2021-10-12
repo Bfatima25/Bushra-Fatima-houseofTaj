@@ -6,27 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservation Form</title>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300, 700" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
 </head>
 <body class="class-for-reservation">
     <header>
         <!-- Top Navigation Menu -->
         <nav>
-         <div class="logo"><h1>House of Taj</h1></div>
-         <div class="openMenu"><i class="fa fa-bars"></i></div>
-         <ul class="mainMenu">
-             <li><a href="index.html">Home</a></li>
-             <li><a href="menu.html">Menu</a></li>
-             <li><a href="#">Reservations</a></li>
-             <li><a href="#">Catering</a></li>
-             <li><a href="#">Our Info</a></li>
-         </ul>
-     </nav>
-     <script src="./app.js"></script>
+            <div class="logo">
+              <img class="class-for-logo" src="./assets/House of Taj.png" alt="Taj Logo">
+            </div>
+            <div class="openMenu"><i class="fa fa-bars"></i></div>
+            <ul class="mainMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="#">Reservations</a></li>
+                <li><a href="catering.html">Catering</a></li>
+                <li><a href="about.html">Our Info</a></li>
+                <div class="closeMenu"><i class="fa fa-times"></i></div>
+            </ul>
+        </nav>
+        
+        <script src="./app.js"></script>
      <div class="contact-box">
-         <h2 class="class-for-reserve">Reserve Your Table Now!</h2>
+         <h2 class="class-for-reserve">Contact Us!</h2>
          <form action="https://formspree.io/f/xgerqqzj" method="POST">
              <input type="text" name="firstName" class="input-field" placeholder="First Name" required>
              <input type="text" name="lastName" class="input-field" placeholder="Last Name" required>
@@ -36,7 +41,25 @@
             </textarea>
             <button type="submit" class="btn" value="Send">Reserve Now</button>
             </form>
-
      </div>
 </body>
+<footer class="footer-for-contact">
+    <nav class="copyright-links-nav">
+        <div class="copyright">2021 &copy; House of Taj</div>
+        <ul class="footer-links">
+          <li class="footer-links__li">
+            <a href="#">Privacy Policy</a>
+          </li>
+          <li class="footer-links__li">
+            <a href="#">About Us</a>
+          </li>
+          <li class="footer-links__li">
+            <a href="#">Careers</a>
+          </li>
+          <li class="footer-links__li">
+            <a href="#">Help</a>
+          </li>
+        </ul>
+      </nav>
+</footer>
 </html>
