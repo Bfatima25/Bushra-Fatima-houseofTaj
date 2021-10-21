@@ -11,9 +11,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
 </head>
-<body class="class-for-menu">
-   <header>
-       <!-- Top Navigation Menu -->
+<body>
        <nav>
         <div class="logo"><h1>House of Taj</h1></div>
         <div class="openMenu"><i class="fa fa-bars"></i></div>
@@ -23,11 +21,11 @@
             <li><a href="contact.html">Reservations</a></li>
             <li><a href="catering.html">Catering</a></li>
             <li><a href="about.html">Our Info</a></li>
+            <div class="closeMenu"><i class="fa fa-times"></i></div>
         </ul>
-        <div class="closeMenu"><i class="fa fa-times"></i></div>
     </nav>
+
     <script src="./app.js"></script>
-   </header> 
    <div class="row">
         <div class="img-menu-container column">
             <img src="./assets/falooda.png" alt="Falooda" width="400" height="300">
@@ -36,7 +34,7 @@
             <img src="./assets/biryani-white.png" alt="Biryani-white" width="400" height="300">
         </div>
         <div class="img-menu-container column">
-            <img src="./assets/naan.png" alt="Naan" width="400" height="300">
+            <img src="./assets/naan.png" alt="Biryani-white" width="400" height="300">
         </div>
     </div>
     <div class="container">
@@ -170,10 +168,9 @@
                 </div>
                 </div>
             </div>
-            <div class="class-for-top">
-            <a href="#top">go to the top</a>
-            </div>
-</body>
+            <a href="#top" class="go-top">
+                <i class="fa fa-chevron-up fa-2x"></i>
+            </a> 
 <footer>
     <nav class="copyright-links-nav">
         <div class="copyright">2021 &copy; House of Taj</div>
@@ -193,4 +190,5 @@
         </ul>
       </nav>
 </footer>
+</body>
 </html>
